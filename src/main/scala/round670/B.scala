@@ -9,7 +9,7 @@ object B extends App {
     val n = scala.io.StdIn.readInt()
     val arr = scala.io.StdIn.readLine().split(" ").map(_.toInt).toList
 
-    val res = arr.sorted.slice(n - 5, arr.length).foldRight(1, (a: Int, b: Int) => a * b)
+    val res = arr.sorted.slice(n - 5, arr.length).foldRight(1)( (a: Int, b: Int) => a * b)
 
 
     println(res)
